@@ -15,8 +15,8 @@ Use `Node.js`, `Express` and `Knex` to build an API that provides **Register** a
 
 ### Complete the following endpoints:
 [X] POST endpoint for register
-[] POST endpoint for login
-[?] GET endpoint for users
+[X] POST endpoint for login
+[X] GET endpoint for users
 
 | Method | Endpoint      | Description                                                                                                                                                                                                                                                                                 |
 | ------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

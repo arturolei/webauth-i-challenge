@@ -68,7 +68,7 @@ server.post('/api/login', (req, res) => {
         req.session.user = user;
         res.status(200).json({ message: `Welcome ${user.username}! You are logged-in` });
       } else {
-        res.status(401).json({ message: 'You shall not pass' });
+        res.status(401).json({ message: 'You shall not pass!' });
       }
     })
     .catch(error => {
@@ -77,7 +77,7 @@ server.post('/api/login', (req, res) => {
 });
 
 //Let's add a logout... why not
-server.get('/logout', (req, res) => {
+server.get('/api/logout', (req, res) => {
     if (req.session) {
       console.log(req.session);
       req.session.destroy(err => {
@@ -101,7 +101,7 @@ server.get('/api/users', restricted, (req, res) => {
     .catch(err => res.send(err));
 });
 
-//MiddleWare with Authentication
+//MiddleWare with Authentication (Simplified now since we are using sessions)
 
 function restricted(req, res, next) {
 
